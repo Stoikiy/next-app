@@ -1,0 +1,47 @@
+@use 'src/theme/variables';
+
+@mixin text_pattern($size, $line-height) {
+  font-weight: 500;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin button_colour($text, $component) {
+  color: $text;
+  border: 2px solid $component;
+}
+
+@mixin button_size($width, $height) {
+  width: $width;
+  height: $height;
+  padding: 0;
+}
+
+.app_button {
+  border-radius: 2px;
+
+  &__main {
+    @include button_colour(variables.$grey_main, variables.$grey_main);
+    background-color: transparent;
+  }
+
+  &__secondary {
+    @include button_colour(variables.$white, variables.$blue_secondary);
+    background-color: variables.$blue_secondary;
+  }
+
+  &_small {
+    @include text_pattern(12px, 18px);
+    @include button_size(109px, 26px);
+  }
+
+  &_medium {
+    @include text_pattern(14px, 24px);
+    @include button_size(160px, 26px);
+  }
+
+  &_huge {
+    @include text_pattern(16px, 26px);
+    @include button_size(189px, 32px);
+  }
+}
