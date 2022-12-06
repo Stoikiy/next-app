@@ -1,0 +1,22 @@
+@use 'src/theme/variables';
+
+.header_container {
+  display: flex;
+  align-items: center;
+  padding: variables.$web_side--borders;
+  height: 60px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &:first-child {
+      justify-content: start;
+    }
+
+    &:last-child {
+      justify-content: end;
+    }
+  }
+}

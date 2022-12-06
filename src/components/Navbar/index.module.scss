@@ -1,0 +1,15 @@
+@use 'src/theme/variables';
+
+.app_nav {
+  display: flex;
+  width: 245px;
+  justify-content: space-between;
+
+  .link {
+    color: variables.$blue_fourth;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+}

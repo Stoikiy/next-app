@@ -6,9 +6,10 @@
   line-height: $line-height;
 }
 
-@mixin button_colour($text, $component) {
+@mixin button_colour($text, $component, $background) {
   color: $text;
   border: 2px solid $component;
+  background-color: $background;
 }
 
 @mixin button_size($width, $height) {
@@ -18,16 +19,17 @@
 }
 
 .app_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 2px;
 
   &__main {
-    @include button_colour(variables.$grey_main, variables.$grey_main);
-    background-color: transparent;
+    @include button_colour(variables.$grey_main, variables.$grey_main, transparent);
   }
 
   &__secondary {
-    @include button_colour(variables.$white, variables.$blue_secondary);
-    background-color: variables.$blue_secondary;
+    @include button_colour(variables.$white, variables.$blue_secondary, variables.$blue_secondary);
   }
 
   &_small {
