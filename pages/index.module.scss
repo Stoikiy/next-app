@@ -1,5 +1,57 @@
 @use 'src/theme/variables';
 
-.main_container {
+.section {
+  display: flex;
+  align-items: center;
+  padding: variables.$web_side--borders;
+  box-sizing: border-box;
+  width: 100%;
 
+  &__first {
+    justify-content: start;
+    height: 1150px;
+  }
+
+  &__second {
+    justify-content: start;
+    height: 750px;
+  }
+
+  &__third {
+    justify-content: end;
+    height: 570px;
+  }
+
+  &__four {
+    justify-content: center;
+    text-align: center;
+    height: 570px;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 93% 2%, 85% 4%, 70% 6%, 70% 6%, 55% 7%, 54% 7%, 30% 6%, 20% 4%, 10% 2%)
+  }
+
+  &:last-child {
+    background-color: variables.$blue_main_light;
+  }
+
+  .image_container {
+    position: absolute;
+    z-index: -1;
+
+    &__first {
+      top: 0;
+      right: 0;
+    }
+
+    &__second {
+      right: 165px;
+    }
+
+    &__third {
+      left: 165px;
+    }
+  }
+
+  .text_custom_styles {
+
+  }
 }

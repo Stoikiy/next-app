@@ -1,0 +1,48 @@
+@use 'src/theme/variables';
+
+.content_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+
+  &__align_left {
+    justify-content: start;
+  }
+
+  &__align_right {
+    justify-content: end;
+  }
+
+  &__align_center {
+    justify-content: center;
+  }
+
+  .text_container {
+    &_headline {
+      &__main {
+        @include variables.global_text_pattern(variables.$grey_main, 50px, 500, 66px);
+        letter-spacing: 1px;
+      }
+
+      &__secondary {
+        @include variables.global_text_pattern(variables.$grey_main, 36px, 500, 48px);
+      }
+    }
+
+    &_paragraph {
+      &__small {
+        @include variables.global_text_pattern(variables.$grey_secondary, 12px, 400, 18px);
+      }
+
+      &__mid {
+        @include variables.global_text_pattern(variables.$grey_secondary, 16px, 400, 24px);
+      }
+
+      &__huge {
+        @include variables.global_text_pattern(variables.$blue_fourth, 18px, 400, 30px);
+      }
+
+      margin-bottom: 70px;
+    }
+  }
+}

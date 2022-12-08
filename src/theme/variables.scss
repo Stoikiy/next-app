@@ -1,4 +1,5 @@
 $white: #FFFFFF;
+$black: #000000;
 
 $grey_main: #454E54;
 $grey_secondary: #5D6970;
@@ -14,3 +15,10 @@ $blue_logo: #37447E;
 $footer_colour: #E7ECFF;
 
 $web_side--borders: 0 165px;
+
+@mixin global_text_pattern($colour, $size, $weight, $height) {
+  color: $colour;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
