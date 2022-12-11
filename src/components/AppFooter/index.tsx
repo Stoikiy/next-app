@@ -6,6 +6,11 @@ import {AppButtonSizes, AppButtonTypes} from '../../enums';
 import Logo from '../Logo';
 import AppButton from '../AppButton';
 import Navbar from '../Navbar';
+import Facebook from '../../../public/facebook.svg';
+import Twitter from '../../../public/twitter.svg';
+import Linkedin from '../../../public/linkedin.svg';
+import Youtube from '../../../public/youtube.svg';
+import Instagram from '../../../public/Instagram.svg';
 
 import styles from './index.module.scss';
 
@@ -24,20 +29,24 @@ const AppFooter: React.FC = () => {
                 <article className={styles.footer_sections__content}>
                     <span>&copy;{currentDate} Yourcompany</span>
                 </article>
-                <article className={styles.footer_sections__content}>
+                <div className={styles.footer_sections__content}>
                     <Logo/>
-                </article>
-                <article className={styles.footer_sections__content}>
+                </div>
+                <div className={styles.footer_sections__content}>
                     <AppButton variant={AppButtonTypes.Secondary} size={AppButtonSizes.Small} text={'Purchase now'}/>
-                </article>
+                </div>
             </section>
             <section className={styles.footer_sections}>
-                <article className={styles.footer_sections__content}>
+                <div className={styles.footer_sections__content}>
                     <Navbar />
-                </article>
-                <article className={styles.footer_sections__content}>
-                    social media
-                </article>
+                </div>
+                <div className={styles.footer_sections__content}>
+                    <Facebook className={styles.social_media} />
+                    <Linkedin className={styles.social_media} />
+                    <Twitter className={styles.social_media} />
+                    <Youtube className={styles.social_media} />
+                    <Instagram className={styles.social_media} />
+                </div>
             </section>
         </footer>
     )

@@ -34,6 +34,14 @@
       &:last-child {
         justify-content: end;
       }
+
+      .social_media {
+        margin-right: 30px;
+
+        &:last-of-type {
+          margin: 0;
+        }
+      }
     }
   }
 }

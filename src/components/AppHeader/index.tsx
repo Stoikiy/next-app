@@ -11,15 +11,15 @@ import styles from './index.module.scss';
 const AppHeader: React.FC = () => {
     return (
             <header className={styles.header_container}>
-                <article className={styles.header_container__content}>
+                <div className={styles.header_container__content}>
                     <NavBar />
-                </article>
-                <article className={styles.header_container__content}>
+                </div>
+                <div className={styles.header_container__content}>
                     <Logo/>
-                </article>
-                <article className={styles.header_container__content}>
+                </div>
+                <div className={styles.header_container__content}>
                     <AppButton variant={AppButtonTypes.Secondary} size={AppButtonSizes.Medium} text='Buy Now' />
-                </article>
+                </div>
             </header>
     )
 }

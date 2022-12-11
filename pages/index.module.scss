@@ -9,7 +9,7 @@
 
   &__first {
     justify-content: start;
-    height: 1150px;
+    height: 1090px;
   }
 
   &__second {
@@ -25,8 +25,12 @@
   &__four {
     justify-content: center;
     text-align: center;
-    height: 570px;
+    height: 1000px;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 93% 2%, 85% 4%, 70% 6%, 70% 6%, 55% 7%, 54% 7%, 30% 6%, 20% 4%, 10% 2%)
+  }
+
+  &:first-child {
+    padding: 0 91px;
   }
 
   &:last-child {
@@ -51,7 +55,19 @@
     }
   }
 
-  .text_custom_styles {
+  .other {
+    display: flex;
 
+    button {
+      &:nth-child(1) {
+        margin-right: 40px;
+      }
+    }
+
+    div {
+      &:nth-child(1) {
+        margin-right: 40px;
+      }
+    }
   }
 }

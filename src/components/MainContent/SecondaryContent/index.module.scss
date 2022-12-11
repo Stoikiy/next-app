@@ -1,0 +1,22 @@
+@use 'src/theme/variables';
+
+.secondary_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+
+  &__header {
+    @include variables.global_text_pattern(variables.$blue_five, 50px, 500, 66px);
+  }
+
+  &__paragraph {
+    @include variables.global_text_pattern(variables.$blue_logo, 16px, 400, 26px);
+
+    &:last-of-type {
+      margin-top: 60px;
+      @include variables.global_text_pattern(variables.$grey_secondary, 14px, 400, 24px);
+    }
+  }
+}

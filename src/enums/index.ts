@@ -14,3 +14,10 @@ export enum MainContentAlignTypes {
     Right = 'right',
     Center = 'center'
 }
+
+export enum MainContentSection {
+    First = 1,
+    Second = 2,
+    Third = 3,
+    Four = 4
+}
